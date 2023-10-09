@@ -17,6 +17,7 @@ public class Semantico implements Constants
         switch (action){
             case 1:
                 System.out.println("CASE 1");
+                System.out.println(token.getLexeme());
                 stack.push(Integer.parseInt(token.getLexeme(), 2));
                 break;
             case 2:
@@ -27,18 +28,23 @@ public class Semantico implements Constants
                 int teste = a.intValue() + b.intValue();
                 stack.push((a.intValue() + b.intValue()));
                 System.out.println(varAtual);
+                System.out.println(teste);
                 break;
             case 3:
                 System.out.println("CASE 3");
+                System.out.println(token.getLexeme());
                 b = stack.pop();
                 a = stack.pop();
 
                 int teste2 = a.intValue() * b.intValue();
                 stack.push((a.intValue() * b.intValue()));
-                System.out.println(varAtual + stack.getFirst());
+                System.out.println(teste2);
+                System.out.println(varAtual);
                 break;
             case 4:
                 System.out.println("CASE 4");
+                System.out.println(token.getLexeme());
+                System.out.println(vars.get(token.getLexeme()));
                 stack.push(vars.get(token.getLexeme()));
                 break;
 
@@ -73,6 +79,7 @@ public class Semantico implements Constants
 
             case 9:
                 System.out.println("CASE 9");
+                System.out.println(token.getLexeme());
                 vars.put(varAtual, stack.pop());
                 break;
 

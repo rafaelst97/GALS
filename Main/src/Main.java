@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) throws LexicalError, SemanticError, SyntaticError {
 
         try {
-            Lexico lexico = new Lexico(new StringReader("A = 10; B = 11; B = A * B; imprimir B;"));
+            Lexico lexico = new Lexico(new StringReader("A = 10; B = 11; B = 111 + A * B; imprimir ( B );"));
             Sintatico sintatico = new Sintatico();
             Semantico semantico = new Semantico();
 
