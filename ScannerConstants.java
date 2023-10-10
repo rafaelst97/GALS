@@ -573,7 +573,7 @@ public interface ScannerConstants
         {122, 11}
     };
 
-    int[] TOKEN_STATE = {-1,  0,  6,  7, 10,  8,  9, 11, 13,  4,  3,  2, 12,  2,  2,  2,  2,  2,  2,  2,  2 };
+    int[] TOKEN_STATE = {-1,  0,  6,  7, 10,  8,  9, 11, 13,  5,  4,  3, 12,  3,  3,  3,  3,  3,  3,  3,  2 };
 
     String[] SCANNER_ERROR =
     {

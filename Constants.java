@@ -5,10 +5,10 @@ public interface Constants extends ScannerConstants, ParserConstants
     int EPSILON  = 0;
     int DOLLAR   = 1;
 
-    int t_variavel = 2;
-    int t_igual = 3;
-    int t_fim = 4;
-    int t_imprimir = 5;
+    int t_imprimir = 2;
+    int t_variavel = 3;
+    int t_igual = 4;
+    int t_fim = 5;
     int t_parEsq = 6;
     int t_parDir = 7;
     int t_soma = 8;
