@@ -1,0 +1,43 @@
+#Options
+GenerateScanner = true
+GenerateParser = true
+Language = Java
+ScannerName = Lexico
+ParserName = Sintatico
+SemanticName = Semantico
+Package = gals
+ScannerCaseSensitive = true
+ScannerTable = Compact
+Input = Stream
+Parser = SLR
+#RegularDefinitions
+
+#Tokens
+ :[\n\t\r\s]+
+imprimir: "imprimir"
+variavel: [a-zA-Z]+
+igual: "="
+fim: ";"
+parEsq: "("
+parDir: ")"
+soma: "+"
+subtracao: "-"
+multiplicacao: "*"
+divisao: "/"
+exp: "^"
+numeros: [0-1]+
+
+#NonTerminals
+<S>
+<COMANDO>
+<A>
+<B>
+<C>
+<D>
+#Grammar
+<S> ::= <S><COMANDO> | <COMANDO>;
+<COMANDO> ::= variavel #10 igual <D> fim #9 | imprimir parEsq <D> parDir fim #8 | <D>;
+<D> ::= <D> soma <C> #2 | <D> subtracao <C> #5 | <C>;
+<C> ::= <C> multiplicacao <B> #3 | <C> divisao <B> #6 | <B>;
+<B> ::= <A> exp <A> #7 | <A>;
+<A> ::= parEsq <D> parDir | numeros #1 | variavel #4;
