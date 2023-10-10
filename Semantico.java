@@ -60,7 +60,6 @@ public class Semantico implements Constants
                 break;
 
             case 9:
-                System.out.println("CASE 9");
                 vars.put(varAtual, stack.pop());
                 break;
 
